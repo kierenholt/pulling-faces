@@ -1,0 +1,29 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "npm",
+			"script": "build",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: build",
+			"detail": "react-scripts build"
+		},
+		{
+			"type": "npm",
+			"script": "start",
+			"group": "build",
+			"problemMatcher": [],
+			"label": "npm: start",
+			"detail": "react-scripts build"
+		},
+        {
+            "label": "launch debug chrome ",
+            "type": "shell",
+            "command": "google-chrome --remote-debugging-port=9222",
+            "args": [],
+            "group": "build",
+            "problemMatcher": []
+        },
+	]
+}

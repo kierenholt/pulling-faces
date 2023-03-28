@@ -1,0 +1,10 @@
+
+.gutter {
+    width: 5px;
+    cursor: col-resize;
+  }
+  
+  
+  .gutter.dragging {
+    opacity: 0;
+  }
