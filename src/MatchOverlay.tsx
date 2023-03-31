@@ -1,24 +1,38 @@
 import { useEffect, useState } from 'react'; // we need this to make JSX compile
-import { MatchRecord, BoundingBox } from './App';
+import { FaceData, BoundingBox, MatchData } from './App';
 
-interface MatchOverlayProps {
-    matchRecord: MatchRecord,
-    imageElement: HTMLImageElement
+interface FaceOverlayProps {
+    boundingBox: BoundingBox,
+    homeImageElement: HTMLImageElement,
+    match: MatchData,
+    variableThatCausesRender: any,
+    allBoxOverlays: any
 }
 
-export const MatchOverlay = ({ matchRecord, imageElement } : MatchOverlayProps ) => {
+export const FaceOverlay = ({ boundingBox, homeImageElement, match, 
+        variableThatCausesRender, allBoxOverlays } : FaceOverlayProps ) => {
+
+    function mouseOverHandler() {
+        //let otherOverlay = allBoxOverlays[otherImageKey];
+        let dummy = 1;
+    }
+
+    const addedPaddingPixels: number = 2; 
     const mystyle: React.CSSProperties = {
-        top: imageElement.clientTop + matchRecord.boundingBoxes[0].Top * imageElement.clientHeight,
-        left: imageElement.clientLeft + matchRecord.boundingBoxes[0].Left * imageElement.clientWidth,
-        height: matchRecord.boundingBoxes[0].Height * imageElement.clientHeight,
-        width: matchRecord.boundingBoxes[0].Width * imageElement.clientWidth,
-        backgroundColor: "red",
-        position: 'absolute'
+        top: homeImageElement.y + boundingBox.Top * homeImageElement.height -4 -addedPaddingPixels,
+        left: homeImageElement.x + boundingBox.Left * homeImageElement.width -4 -addedPaddingPixels,
+        height: boundingBox.Height * homeImageElement.height +2*addedPaddingPixels, 
+        width: boundingBox.Width * homeImageElement.width +2*addedPaddingPixels,
+        position: 'absolute',
+        borderWidth: '4px',
+        borderStyle: 'solid',
+        borderColor: '#0f0',
+        borderRadius: '5px'
       };
     return (
         <div className="MatchOverlay"
-            style={mystyle}
-        ></div>
+            style={mystyle} onMouseOver={mouseOverHandler}
+        >{variableThatCausesRender}</div>
     );
 }
 
