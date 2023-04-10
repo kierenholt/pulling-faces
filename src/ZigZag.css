@@ -1,0 +1,35 @@
+div#zigzag svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+div#zigzag .line {
+    stroke: #0f0;
+    stroke-width: 2px;
+
+    animation-name: growLine;
+    animation-duration: 1s;
+    animation-fill-mode: none;
+}
+
+div#zigzag p {
+    position: absolute;
+    width: 10vw;
+    height: 7vw;
+    z-index: 2;
+    background-color: #fffd;
+    border-color: #0f0;
+    border-width: 2px;
+    border-style: solid;
+    font-size: 3vw;
+    border-radius: 5px;
+}
+
+@keyframes growLine {
+    from {stroke-dasharray: 0% 100%;}
+    to {stroke-dasharray: 100% 100%;}
+  }
