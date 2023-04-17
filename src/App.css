@@ -14,16 +14,26 @@
 
 .flexChild {
   width: 40%;
-
 }
 
 
 .r {
-  background-color: red;
+  /* background-color: red; */
 
 }
 
 .b {
-  background-color: blue;
+  /* background-color: blue; */
   flex-grow: 1;
+}
+
+p.highLightMatchesSensor {
+  z-index: 100;
+  position: relative;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #000;
+  border-radius: 2vw;
+  margin: 2vw 5vw;
+  padding: 0.5vw;
 }

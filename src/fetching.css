@@ -1,0 +1,22 @@
+div#fetching {
+
+    position: absolute;
+    background: #fff6;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#fetching p {
+
+    border-radius: 2vw;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000;
+    padding: 5vw;
+    background-color: #fff;
+}

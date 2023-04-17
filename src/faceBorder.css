@@ -1,0 +1,30 @@
+div.faceBorder {
+    width: 100%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    border-radius: 5px;
+}
+
+div.faceBorder.hide {
+    animation-name: shrinkHeight;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+div.faceBorder.show {
+    animation-name: growHeight;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes growHeight {
+    from {height: 0}
+    to {height: 100%}
+  }
+
+
+@keyframes shrinkHeight {
+    from {height: 0}
+    to {height: 100%}
+  }

@@ -2,6 +2,7 @@
 .gutter {
     width: 5px;
     cursor: col-resize;
+    z-index: 300;
   }
   
   

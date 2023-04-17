@@ -3,9 +3,12 @@ interface FakeCaptchaButtonProps {
     onClickHandler: () => void;
 }
 
+
 export const FakeCaptchaButton = ({onClickHandler}: FakeCaptchaButtonProps) => {
-    return <button
-        onClick={onClickHandler}>
-        I am human
-    </button>
+    (window as any)['onSubmit'] = (token: any) => { onClickHandler(); }
+
+    return <button className="g-recaptcha" 
+        data-sitekey="6Lf83ZMlAAAAAMNN-VYRqYdT7gX9Sy2MbPkLmXGi" 
+        data-callback='onSubmit' 
+        data-action='submit'>I am human</button>
 }

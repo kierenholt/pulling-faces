@@ -1,0 +1,55 @@
+div#modeButton {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-wrap: stretch;
+    border: none 1px red;
+}
+
+
+div#modeButton.mode2 {
+    transform: rotate(90deg);
+}
+
+div#modeButton.clicked div {
+    background-color: #000;
+}
+
+div#modeButton.clicked div {
+    border-color: #fff;
+    background-color: #000;
+}
+
+div#modeButton.mode1.readyForHover:hover {
+    animation-name: rotateModeButton;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+
+div#modeButton.mode2.readyForHover:hover {
+    animation-name: rotateModeButtonReverse;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+div#modeButton div {
+    border-style: solid;
+    border-width: 5px;
+    width: 40%;
+    margin: 5% 5%;
+    border-radius: 15px;
+
+}
+
+@keyframes rotateModeButton {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(90deg);}
+  }
+
+
+@keyframes rotateModeButtonReverse {
+    to {transform: rotate(0deg);}
+    from {transform: rotate(90deg);}
+  }
+

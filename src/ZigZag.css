@@ -8,7 +8,7 @@ div#zigzag svg {
 }
 
 div#zigzag .line {
-    stroke: #0f0;
+    stroke: #fff;
     stroke-width: 2px;
 
     animation-name: growLine;
@@ -16,20 +16,30 @@ div#zigzag .line {
     animation-fill-mode: none;
 }
 
+@keyframes growLine {
+    from {stroke-dasharray: 0% 100%;}
+    to {stroke-dasharray: 100% 100%;}
+}
+
+
 div#zigzag p {
     position: absolute;
     width: 10vw;
-    height: 7vw;
     z-index: 2;
     background-color: #fffd;
-    border-color: #0f0;
+    border-color: #fff;
     border-width: 2px;
     border-style: solid;
     font-size: 3vw;
     border-radius: 5px;
+    overflow: hidden;
+    
+    animation-name: growHeightP;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
 
-@keyframes growLine {
-    from {stroke-dasharray: 0% 100%;}
-    to {stroke-dasharray: 100% 100%;}
+@keyframes growHeightP {
+    from {height: 0; transform: translateY(3.5vw); color:#0000}
+    to {height: 7vw; transform: translateY(0); color:#000f}
   }

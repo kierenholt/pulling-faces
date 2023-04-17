@@ -7,9 +7,12 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
-root.render(
+
+let demoIndexFromSearch = Number(new URL(window.location.href).searchParams.get("demo")) ?? 0;
+
+root.render(  
   <React.StrictMode>
-    <App />
+    <App demoIndex={demoIndexFromSearch} />
   </React.StrictMode>
 );
 
