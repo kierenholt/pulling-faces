@@ -1,6 +1,5 @@
 div#zigzag svg {
     position: absolute;
-    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
@@ -25,7 +24,7 @@ div#zigzag .line {
 div#zigzag p {
     position: absolute;
     width: 10vw;
-    z-index: 2;
+    z-index: 400;
     background-color: #fffd;
     border-color: #fff;
     border-width: 2px;

@@ -3,9 +3,26 @@
     width: 5px;
     cursor: col-resize;
     z-index: 300;
+    background-color: #eee;
+    position: relative;
+    height: calc(100vh - 64px);
   }
   
   
   .gutter.dragging {
     opacity: 0;
+  }
+
+  .gutter p {
+
+    position: absolute;
+    top: 60%;
+    left: -0.7em;
+    background: white;
+    border-radius: 4em;
+    padding: 0.3em 0;
+    font-weight: bold;
+    color: #666;
+    line-height: 1em;
+    cursor: grab;
   }

@@ -4,7 +4,11 @@ import './fetching.css'
 export const Fetching = () => {
 
         return (<div id="fetching">
-            <p>now pulling faces...this can take up to 3 minutes so please be patient</p>
+            <p>now pulling faces...
+                this can take up to 3 minutes so please be patient
+                <br></br>
+                TIP: Click a face to show the match 
+                </p>
         </div>);
 
 }

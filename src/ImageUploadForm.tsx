@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'; // we need this to make JSX compile
+import './imageUploadForm.css'
 
 interface ImageUploadFormProps {
     setImageKey: any,
@@ -58,15 +59,22 @@ export const ImageUploadForm = ({ setImageKey, setImageSrc }: ImageUploadFormPro
         });
     }
 
-    return <form ref={formRef} encType="multipart/form-data" method="post" onSubmit={onFormSubmit}>
+    return <form ref={formRef} encType="multipart/form-data" 
+        method="post" onSubmit={onFormSubmit} className="imageUploadForm">
 
         {preSignedResponse && Object.entries(preSignedResponse?.postConfig["fields"]).map(([key, value]) =>
             <input type="hidden" name={key} key={key} value={value as string} />)
         }
 
-        Choose an image to upload
+        Choose an image to upload <br />
+
         {preSignedResponse && 
             <input ref={fileRef} type="file" name="file" accept="image/*" onChange={onFormSubmit}></input>
         }
+
+        <br />
+        <p className="small">
+            Please note: no images are stored on our servers (they are deleted immediately after the face recognition has been completed) 
+        </p>
     </form>
 }

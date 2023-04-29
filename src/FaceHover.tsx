@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'; // we need this to make JSX compile
-import { MatchData, GlobalBoundingBox } from './App';
+import { MatchData, GlobalBoundingBox } from './pullingApp';
 
 interface FaceHoverProps {
     gb: GlobalBoundingBox
@@ -42,7 +42,10 @@ export const FaceHover = ({ gb, match,
 
     return (
         <div className="MatchOverlay"
-            style={mystyle} onMouseEnter={mouseOverHandler} onMouseLeave={mouseLeaveHandler}>
+            style={mystyle} 
+            onMouseEnter={mouseOverHandler} 
+            onClick={mouseOverHandler} 
+            onMouseLeave={mouseLeaveHandler}>
         </div>
 
     );

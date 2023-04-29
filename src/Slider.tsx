@@ -35,6 +35,7 @@ export default function Slider({ setWidth }: SliderParams) {
                 onDragStart={dragStart}
                 onDragEnd={drop}
                 draggable>
+            <p>&lt;&nbsp;&nbsp;&gt;</p>
         </div>
     )
 }

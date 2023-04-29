@@ -1,0 +1,116 @@
+
+@media (max-width: 900px) {
+  
+button.captchaButton, button.imageButton {
+  width: 45vw;
+  height: 45vw;
+}
+}
+
+@media (min-width: 901px) {
+  
+button.captchaButton, button.imageButton {
+  width: 20vw;
+  height: 20vw;
+}
+}
+
+
+div#pullingAppThumbs {
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+button.captchaButton {
+    z-index: 100;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #bbb;
+    background-color: #fff;
+    border-radius: 1vw;
+    margin: 0 auto;
+    padding: 2vw;
+    font-weight: 900;
+    color: #333;
+    position: relative;
+  }
+
+  button.captchaButton p {
+
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    left: 0;
+    right: 0;
+    line-height: 0em;
+  }
+
+  button.captchaButton:hover {
+    background-color: #666;
+    color: #fff;
+  }
+
+  button.captchaButton img {
+
+    display: block;
+    height: 73%;
+    margin: 0 auto;
+    position: absolute;
+    top: 5%;
+  }
+
+  button.captchaButton:p {
+    background-color: #666;
+    color: #fff;
+  }
+
+  button.imageButton {
+    position: relative;
+    border-radius: 2vw;
+    margin: 5vw auto;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #bbb;
+    font-weight: 900;
+    color: #333;
+  }
+
+
+  button.imageButton:hover  {
+    
+    background-color: #666;
+    color: #fff;
+  }
+  
+  button.imageButton img.buttonImage1 {
+    display: block;
+    height: 60%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    border-radius: 10px;
+  }
+
+  button.imageButton img.buttonImage2 {
+    display: block;
+    height: 60%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 2em;
+    right: 5%;
+    border-radius: 10px;
+  }
+
+  button.imageButton p {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    text-align: center;
+    left: 0;
+    right: 0;
+    line-height: 0em;
+  }

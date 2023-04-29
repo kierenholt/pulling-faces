@@ -1,0 +1,99 @@
+
+@media (max-width: 900px) {
+    .headingBlock {
+        width: 100%;
+    }
+    .contentBlock {
+        width: 100%;
+        
+      }
+    .mainContent {
+        flex-wrap: wrap;
+    }
+  }
+
+  @media (min-width: 901px) {
+    .headingBlock {
+        width: 40%;
+    }
+    .contentBlock {
+        width: 40%;
+    }
+    .mainContent {
+        flex-wrap: nowrap;
+    }
+  }
+
+
+div.mainContent {
+    color: #ccc;
+    text-align: center;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  div.headingBlock {
+    height: 10em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    color: #fff;
+    padding: 2em;
+    overflow: visible;
+}
+
+div.headingBlock h1 {
+    font-size: 64px;
+    color: #ffc0cb;
+    text-align: center;    text-shadow: 2px 0px 1px #000, 0px 2px 1px #000, -2px 0px 1px #000, 0px -2px 1px #000, -2px -2px 1px #000, 2px 2px 1px #000, 2px -2px 1px #000, -2px 2px 1px #000;
+    margin: 0;
+    padding: 0;
+}
+
+div.headingBlock img {
+    mix-blend-mode: screen;
+    position: absolute;
+    filter:brightness(0.3);
+    width: 150%;
+    right: 0;
+    top: -9%;
+    left: -30%;
+    
+}
+
+
+div.contentBlock {
+    padding: 2em;
+}
+
+div.contentBlock p {
+    color: #eee;
+    font-weight: 900;
+    text-align: justify;
+}
+
+
+  
+  
+  
+  
+  div.mainContent textarea {
+      width: 80%;
+      height: 7em;
+  }
+  
+  div.mainContent input {
+    width: 80%;
+  }
+
+  div.mainContent button {
+
+    font-size: 1em;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #bbb;
+    background-color: #fff;
+    border-radius: 1vw;
+    padding: 2vw;
+    color: #000;
+  }

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'; // we need this to make JSX compile
-import { GlobalBoundingBox } from './App';
+import { GlobalBoundingBox } from './pullingApp';
 import './faceBorder.css'
 
 interface FaceBorderProps {
