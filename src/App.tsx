@@ -11,7 +11,7 @@ export default function App() {
   let url : URL = new URL(window.location.href);
 
   return (
-    <div>
+    <>
       <Nav />
       {( url.pathname === '/' || url.pathname === '' || url.pathname === '/demo') ? <PullingApp /> :
         ( url.pathname === '/contact') ? <ContactUs /> : 
@@ -20,6 +20,6 @@ export default function App() {
         ( url.pathname === '/uses') ? <Content page={ContentPage.uses} /> : 
         <PullingApp />
       }
-    </div>
+    </>
   )
 }

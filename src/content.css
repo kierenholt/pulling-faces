@@ -30,6 +30,7 @@ div.mainContent {
     text-align: center;
     display: flex;
     overflow: hidden;
+    flex-grow: 1;
   }
   
   div.headingBlock {
