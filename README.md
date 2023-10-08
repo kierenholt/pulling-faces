@@ -28,3 +28,6 @@ amplify publish
 https://analytics.google.com/analytics/web/#/a266359978p372973768/admin
 
 
+## to deploy
+https://www.cloudthat.com/resources/blog/step-by-step-guide-to-deploy-reactjs-app-on-aws-s3
+***NOTE*** bucket name must be same as domain e.g. www.pullingfaces.com
